@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Demonstrate OAuth2 and Active Directory support in NodeJS",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "cross-env NODE_ENV=local node ./server"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abraham-serafino/node-security.git"
@@ -16,6 +18,10 @@
   },
   "homepage": "https://github.com/abraham-serafino/node-security#readme",
   "dependencies": {
-    "activedirectory": "^0.7.2"
+    "activedirectory": "^0.7.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }
