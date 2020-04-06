@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Demonstrate OAuth2 and Active Directory support in NodeJS",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abraham-serafino/node-security.git"
@@ -15,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/abraham-serafino/node-security/issues"
   },
-  "homepage": "https://github.com/abraham-serafino/node-security#readme"
+  "homepage": "https://github.com/abraham-serafino/node-security#readme",
+  "dependencies": {
+    "activedirectory": "^0.7.2"
+  }
 }
