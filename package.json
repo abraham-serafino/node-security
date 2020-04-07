@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/abraham-serafino/node-security#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "activedirectory": "^0.7.2",
     "express": "^4.17.1",
     "next": "^9.3.4",

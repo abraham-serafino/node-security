@@ -1,26 +1,25 @@
 import authenticate from "../../Login/sso-login"
+import Joi from "@hapi/joi"
+import handleRequest from "../../handleRequest"
 
 const login = async (request, response) => {
-  const { username, password } = request.body
+  const schema = Joi.object({
+    username: Joi.string().required(),
+    password: Joi.string().required()
+  })
 
-  try {
+  await handleRequest(schema, request, response, async () => {
+    const { username, password } = request.body
+
     const result = await authenticate(username, password)
     console.log(result)
 
     if (result === "Authentication failed.") {
-      response.status(401)
+      return { status: 401, responseBody: result }
     } else {
-      response.status(200)
+      return { status: 200, responseBody: result }
     }
-
-    response.send(result)
-
-  } catch (error) {
-    console.log(JSON.stringify(error, null, 2))
-    console.log(JSON.stringify(`Incoming request: ${request}`, null, 2))
-
-    response.status(500).json(error)
-  }
+  })
 }
 
 export default login
