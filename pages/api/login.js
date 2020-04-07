@@ -16,6 +16,9 @@ const login = async (request, response) => {
     response.send(result)
 
   } catch (error) {
+    console.log(JSON.stringify(error, null, 2))
+    console.log(JSON.stringify(`Incoming request: ${request}`, null, 2))
+
     response.status(500).json(error)
   }
 }
