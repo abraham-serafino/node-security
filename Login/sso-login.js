@@ -1,5 +1,5 @@
-const config = require("./config.js")
-const ActiveDirectory = require("activedirectory")
+import config from "../config.js"
+import ActiveDirectory from "activedirectory"
 
 const authenticate = (username, password) =>
   new Promise((resolve, reject) => {
@@ -13,11 +13,11 @@ const authenticate = (username, password) =>
 
       if (auth) {
         console.log("Authenticated")
-        resolve()
+        resolve("Authenticated")
       } else {
-        reject("Authentication failed")
+        resolve("Authentication failed")
       }
     })
   })
 
-module.exports = authenticate
+export default authenticate
