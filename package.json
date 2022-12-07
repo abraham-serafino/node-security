@@ -22,7 +22,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "activedirectory": "^0.7.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "next": "^9.3.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
